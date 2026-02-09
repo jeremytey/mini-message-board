@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        h1 { color: #333; }
+        form { background: #f8f9fa; padding: 30px; border-radius: 8px; }
+        label { display: block; margin: 15px 0 5px; font-weight: bold; color: #555; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; box-sizing: border-box; }
+        textarea { resize: vertical; min-height: 100px; }
+        button { margin-top: 20px; padding: 12px 30px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #218838; }
+        .back-link { display: inline-block; margin-top: 15px; color: #007bff; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1> New Message</h1>
+    
+    <form method="POST" action="/new">
+        <label for="messageUser">Your Name:</label>
+        <input type="text" id="messageUser" name="messageUser" required placeholder="Enter your name">
+        
+        <label for="messageText">Message:</label>
+        <textarea id="messageText" name="messageText" required placeholder="What's on your mind?"></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <a href="/" class="back-link">← Back to messages</a>
+</body>
+</html>

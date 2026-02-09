@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 50px auto; padding: 20px; }
+        h1 { color: #333; }
+        .message-card { background: #f8f9fa; padding: 30px; border-radius: 8px; border-left: 5px solid #007bff; margin: 20px 0; }
+        .user { font-size: 1.3em; color: #007bff; font-weight: bold; margin-bottom: 10px; }
+        .text { font-size: 1.1em; color: #333; line-height: 1.6; margin: 20px 0; }
+        .date { color: #6c757d; font-size: 0.9em; font-style: italic; }
+        .back-link { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #6c757d; color: white; text-decoration: none; border-radius: 5px; }
+        .back-link:hover { background: #545b62; }
+    </style>
+</head>
+<body>
+    <h1> Message Details</h1>
+    
+    <div class="message-card">
+        <div class="user">👤 <%= message.user %></div>
+        <div class="text"><%= message.text %></div>
+        <div class="date">📅 <%= message.added.toLocaleString() %></div>
+    </div>
+    
+    <a href="/" class="back-link">← Back to all messages</a>
+</body>
+</html>

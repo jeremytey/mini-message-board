@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+       <title><%= title %></title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        h1 { color: #333; }
+        .new-btn { display: inline-block; margin: 20px 0; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        .new-btn:hover { background: #0056b3; }
+        ul { list-style: none; padding: 0; }
+        li { background: #f8f9fa; margin: 10px 0; padding: 15px; border-radius: 5px; border-left: 4px solid #007bff; }
+        li strong { color: #007bff; }
+        li a { color: #333; text-decoration: none; }
+        li a:hover { text-decoration: underline; }
+        li em { color: #6c757d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <a href="/new" class="new-btn">Create a new message</a>
+    
+    <ul>
+    <% messages.forEach(function(message) { %>
+        <li>
+            <strong><%= message.user %>:</strong> 
+            <a href="/message/<%= message.id %>"><%= message.text %></a>
+            <em>(added on <%= message.added.toLocaleString() %>)</em>
+
+        </li>
+    <% }); %>
+    </ul>
+</body>
+</html>
